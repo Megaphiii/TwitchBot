@@ -24,19 +24,19 @@ client.on('connected', (address, port) => {
 })
 
 client.on('chat', (channel, user, message ,self) =>{
-    if(message === '!Timer2' || message === '!timer2'){
+    if(message === '!Timer2' || message === '!timer2' || message === '!Timer 2' || message === '!timer 2'){
         client.action('Schmiriii', '2 Min Timer gestartet.')
-        setTimeout(timerFunc, 20000)
+        setTimeout(timerFunc, 120000)
         function timerFunc(){
-            client.action('Schmiriii', '2 Min Timer Done.')
+            client.action('Schmiriii', '2 Min Timer Done. :O')
         }
     }
 
-    if(message === '!Timer5' || message === '!timer5'){
+    if(message === '!Timer5' || message === '!timer5' || message === '!Timer 5' || message === '!timer 5'){
         client.action('Schmiriii', '5 Min Timer gestartet.')
-        setTimeout(timerFunc, 5000)
+        setTimeout(timerFunc, 300000)
         function timerFunc(){
-            client.action('Schmiriii', '5 Min Timer Done.')
+            client.action('Schmiriii', '5 Min Timer Done. :O')
         }
     }
 })
