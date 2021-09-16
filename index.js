@@ -39,8 +39,4 @@ client.on('chat', (channel, user, message ,self) =>{
             client.action('saqzzy', '5 Min Timer Done. :O')
         }
     }
-    
-    if(message === 'Sadge'){
-        client.action('saqzzy', 'Sadge')
-    }
 })
