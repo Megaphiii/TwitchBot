@@ -39,4 +39,13 @@ client.on('chat', (channel, user, message ,self) =>{
             client.action('saqzzy', '5 Min Timer Done. :O')
         }
     }
+    
+    if(message === '!Miri' || message === '!miri' || message === '!mirjam' || message === '!Mirjam' || message === '!mirii' || message === '!Mirii') {
+        client.action('saqzzy', 'Miri ist cute. <3')
+    }
+    
+    if(message === '!bra') {
+        var x = Math.floor(Math.random() * (100 - 1) + 1);
+        client.action('saqzzy', 'Du bist zu' + x + 'bratan')
+    }
 })
