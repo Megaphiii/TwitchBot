@@ -48,4 +48,8 @@ client.on('chat', (channel, user, message ,self) =>{
         var x = Math.floor(Math.random() * (100 - 1) + 1);
         client.action('saqzzy', 'Du bist zu ' + x + '% Bratan B)')
     }
+    
+    if(message === '?tiktok') {
+        client.action('saqzzy', 'Bester TikToker :O : https://www.tiktok.com/@saqzzy')
+    }
 })
