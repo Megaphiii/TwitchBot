@@ -76,6 +76,7 @@ client.on('chat', (channel, user, message ,self) =>{
                 client.action('saqzzy', 'ICH GEHE REIN')
             }
             setTimeout(add, 1000)
+            function add(){}
             if(i == 10){
                 client.action('saqzzy', erg + ' wäre richtig gewesen!')
             }
