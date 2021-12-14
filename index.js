@@ -76,15 +76,11 @@ client.on('chat', (channel, user, message ,self) =>{
             setTimeout(add, 1000)
             function add(){
                 sec++;
-                if(sec == 10){
-                    client.action('saqzzy', erg + ' wäre richtig gewesen!')
-                    i=50;
-                }
             }
-        }
-        setTimeout(antwort, 2000)
-        function antwort(){
-            client.action('saqzzy', erg + ' ist RICHTIG!')
+            if(sec == 10){
+                client.action('saqzzy', erg + ' wäre richtig gewesen!')
+                i=50;
+            }
         }
     }
     
