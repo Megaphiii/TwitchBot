@@ -71,15 +71,13 @@ client.on('chat', (channel, user, message ,self) =>{
             erg = r1*r2;
         }
         
-        var sec = 0;
-        for(var i=0;i>20;i++){
-            setTimeout(add, 1000)
-            function add(){
-                sec++;
+        for(var i=0;i<20;i++){
+            if(i == 0){
+                client.action('saqzzy', 'ICH GEHE REIN')
             }
-            if(sec == 10){
+            setTimeout(add, 1000)
+            if(i == 10){
                 client.action('saqzzy', erg + ' wäre richtig gewesen!')
-                i=50;
             }
         }
     }
