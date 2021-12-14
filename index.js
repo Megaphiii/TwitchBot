@@ -16,7 +16,7 @@ const options = {
 }
 
 const client = new tmi.client(options);
-
+var ergAnt;
 client.connect();
 
 client.on('connected', (address, port) => {
@@ -49,7 +49,37 @@ client.on('chat', (channel, user, message ,self) =>{
         client.action('saqzzy', 'Du bist zu ' + x + '% Bratan B)')
     }
     
-    if(message === '?tiktok') {
-        client.action('saqzzy', 'Bester TikToker :O : https://www.tiktok.com/@saqzzy')
+    if(message === '') {
+        var x = Math.floor(Math.random() * (3 - 1) + 1);
+        if(x === 1){
+            var r1 = Math.floor(Math.random() * (10000 - 1) + 1);
+            var r2 = Math.floor(Math.random() * (10000 - 1) + 1);
+            client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' + ' + r2 + ' = ?')
+            var erg = r1+r2;
+        }
+        if(x === 2){
+            var r1 = Math.floor(Math.random() * (5000 - 1) + 1);
+            var r2 = Math.floor(Math.random() * (5000 - 1) + 1);
+            client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' - ' + r2 + ' = ?')
+            var erg = r1-r2;
+        }
+        if(x === 3){
+            var r1 = Math.floor(Math.random() * (15 - 1) + 1);
+            var r2 = Math.floor(Math.random() * (15 - 1) + 1);
+            client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
+            var erg = r1*r2;
+        }
+        var sec = 0;
+        while(erg === ergAnt){
+            setTimeout(add, 1000)
+            function add(){
+                sec++;
+            }
+        }
+        client.action('saqzzy', erg + ' ist RICHTIG!')
+    }
+    
+    if(message === erg){
+        ergAnt = message;
     }
 })
