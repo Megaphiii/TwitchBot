@@ -49,7 +49,7 @@ client.on('chat', (channel, user, message ,self) =>{
         client.action('saqzzy', 'Du bist zu ' + x + '% Bratan B)')
     }
     
-    if(message === '') {
+    if(message === '!rechnung') {
         var x = Math.floor(Math.random() * (3 - 1) + 1);
         if(x === 1){
             var r1 = Math.floor(Math.random() * (10000 - 1) + 1);
