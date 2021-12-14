@@ -24,7 +24,7 @@ client.on('connected', (address, port) => {
 })
 
 client.on('chat', (channel, user, message ,self) =>{
-    if(message === '!Timer2' || message === '!timer2' || message === '!Timer 2' || message === '!timer 2'){
+    if(message == '!Timer2' || message == '!timer2' || message == '!Timer 2' || message == '!timer 2'){
         client.action('saqzzy', '2 Min Timer gestartet.')
         setTimeout(timerFunc, 120000)
         function timerFunc(){
@@ -32,7 +32,7 @@ client.on('chat', (channel, user, message ,self) =>{
         }
     }
 
-    if(message === '!Timer5' || message === '!timer5' || message === '!Timer 5' || message === '!timer 5'){
+    if(message == '!Timer5' || message == '!timer5' || message == '!Timer 5' || message == '!timer 5'){
         client.action('saqzzy', '5 Min Timer gestartet.')
         setTimeout(timerFunc, 300000)
         function timerFunc(){
@@ -40,41 +40,41 @@ client.on('chat', (channel, user, message ,self) =>{
         }
     }
     
-    if(message === '!Miri' || message === '!miri' || message === '!mirjam' || message === '!Mirjam' || message === '!mirii' || message === '!Mirii') {
+    if(message == '!Miri' || message == '!miri' || message == '!mirjam' || message == '!Mirjam' || message == '!mirii' || message == '!Mirii') {
         client.action('saqzzy', 'Miri ist cute. <3')
     }
     
-    if(message === '!bra') {
+    if(message == '!bra') {
         var x = Math.floor(Math.random() * (100 - 1) + 1);
         client.action('saqzzy', 'Du bist zu ' + x + '% Bratan B)')
     }
     
-    if(message === '!rechnung') {
+    if(message == '!rechnung') {
         var x = Math.floor(Math.random() * (4 - 1) + 1);
-        if(x === 1){
+        if(x == 1){
             var r1 = Math.floor(Math.random() * (1000 - 1) + 1);
             var r2 = Math.floor(Math.random() * (1000 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' + ' + r2 + ' = ?')
             var erg = r1+r2;
         }
-        if(x === 2){
+        if(x == 2){
             var r1 = Math.floor(Math.random() * (500 - 1) + 1);
             var r2 = Math.floor(Math.random() * (500 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' - ' + r2 + ' = ?')
             var erg = r1-r2;
         }
-        if(x === 3){
+        if(x == 3){
             var r1 = Math.floor(Math.random() * (15 - 1) + 1);
             var r2 = Math.floor(Math.random() * (15 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
             var erg = r1*r2;
         }
         var sec = 0;
-        while(erg === ergAnt){
+        while(erg != ergAnt){
             setTimeout(add, 1000)
             function add(){
                 sec++;
-                if(sec === 10){
+                if(sec == 10){
                     client.action('saqzzy', erg + ' wäre richtig gewesen!')
                     return 0;
                 }
@@ -86,7 +86,7 @@ client.on('chat', (channel, user, message ,self) =>{
         }
     }
     
-    if(message === erg){
+    if(message == erg){
         ergAnt = message;
     }
 })
