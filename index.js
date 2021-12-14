@@ -17,6 +17,7 @@ const options = {
 
 const client = new tmi.client(options);
 var ergAnt;
+var erg;
 client.connect();
 
 client.on('connected', (address, port) => {
@@ -55,20 +56,21 @@ client.on('chat', (channel, user, message ,self) =>{
             var r1 = Math.floor(Math.random() * (1000 - 1) + 1);
             var r2 = Math.floor(Math.random() * (1000 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' + ' + r2 + ' = ?')
-            var erg = r1+r2;
+            erg = r1+r2;
         }
         if(x == 2){
             var r1 = Math.floor(Math.random() * (500 - 1) + 1);
             var r2 = Math.floor(Math.random() * (500 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' - ' + r2 + ' = ?')
-            var erg = r1-r2;
+            erg = r1-r2;
         }
         if(x == 3){
             var r1 = Math.floor(Math.random() * (15 - 1) + 1);
             var r2 = Math.floor(Math.random() * (15 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
-            var erg = r1*r2;
+            erg = r1*r2;
         }
+        /*
         var sec = 0;
         while(erg != ergAnt){
             setTimeout(add, 1000)
@@ -79,7 +81,7 @@ client.on('chat', (channel, user, message ,self) =>{
                     return 0;
                 }
             }
-        }
+        }*/
         setTimeout(antwort, 2000)
         function antwort(){
             client.action('saqzzy', erg + ' ist RICHTIG!')
@@ -88,5 +90,6 @@ client.on('chat', (channel, user, message ,self) =>{
     
     if(message == erg){
         ergAnt = message;
+        client.action('saqzzy', 'RICHTIG!')
     }
 })
