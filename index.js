@@ -78,7 +78,7 @@ client.on('chat', (channel, user, message ,self) =>{
                 sec++;
                 if(sec == 10){
                     client.action('saqzzy', erg + ' wäre richtig gewesen!')
-                    break;
+                    i=50;
                 }
             }
         }
