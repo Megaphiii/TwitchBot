@@ -72,7 +72,7 @@ client.on('chat', (channel, user, message ,self) =>{
         }
         
         var sec = 0;
-        for(var i=0;i<20;i++){
+        for(var i=0;i>20;i++){
             setTimeout(add, 1000)
             function add(){
                 sec++;
