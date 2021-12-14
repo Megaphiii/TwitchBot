@@ -50,16 +50,16 @@ client.on('chat', (channel, user, message ,self) =>{
     }
     
     if(message === '!rechnung') {
-        var x = Math.floor(Math.random() * (3 - 1) + 1);
+        var x = Math.floor(Math.random() * (4 - 1) + 1);
         if(x === 1){
-            var r1 = Math.floor(Math.random() * (10000 - 1) + 1);
-            var r2 = Math.floor(Math.random() * (10000 - 1) + 1);
+            var r1 = Math.floor(Math.random() * (1000 - 1) + 1);
+            var r2 = Math.floor(Math.random() * (1000 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' + ' + r2 + ' = ?')
             var erg = r1+r2;
         }
         if(x === 2){
-            var r1 = Math.floor(Math.random() * (5000 - 1) + 1);
-            var r2 = Math.floor(Math.random() * (5000 - 1) + 1);
+            var r1 = Math.floor(Math.random() * (500 - 1) + 1);
+            var r2 = Math.floor(Math.random() * (500 - 1) + 1);
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' - ' + r2 + ' = ?')
             var erg = r1-r2;
         }
@@ -74,6 +74,10 @@ client.on('chat', (channel, user, message ,self) =>{
             setTimeout(add, 1000)
             function add(){
                 sec++;
+                if(sec === 10){
+                    client.action('saqzzy', erg + ' wäre richtig gewesen!')
+                    return 0;
+                }
             }
         }
         setTimeout(antwort, 2000)
