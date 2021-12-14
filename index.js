@@ -70,9 +70,9 @@ client.on('chat', (channel, user, message ,self) =>{
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
             erg = r1*r2;
         }
-        /*
+        
         var sec = 0;
-        while(erg != ergAnt){
+        for(var i=0;i<20;i++){
             setTimeout(add, 1000)
             function add(){
                 sec++;
@@ -81,7 +81,7 @@ client.on('chat', (channel, user, message ,self) =>{
                     return 0;
                 }
             }
-        }*/
+        }
         setTimeout(antwort, 2000)
         function antwort(){
             client.action('saqzzy', erg + ' ist RICHTIG!')
