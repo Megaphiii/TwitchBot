@@ -70,7 +70,7 @@ client.on('chat', (channel, user, message ,self) =>{
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
             erg = r1*r2;
         }
-        
+        /*
         for(var i=0;i<20;i++){
             if(i == 0){
                 client.action('saqzzy', 'ICH GEHE REIN')
@@ -80,7 +80,7 @@ client.on('chat', (channel, user, message ,self) =>{
             if(i == 10){
                 client.action('saqzzy', erg + ' wäre richtig gewesen!')
             }
-        }
+        }*/
     }
     
     if(message == erg){
