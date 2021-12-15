@@ -24,7 +24,7 @@ client.on('connected', (address, port) => {
     console.log('Verbindungsaufbau Erfolgreich')
 })
 
-client.on('chat', (channel, tags, user, message ,self) =>{
+client.on('chat', (channel, user, message ,self) =>{
     if(message == '!Timer2' || message == '!timer2' || message == '!Timer 2' || message == '!timer 2'){
         client.action('saqzzy', '2 Min Timer gestartet.')
         setTimeout(timerFunc, 120000)
@@ -89,7 +89,7 @@ client.on('chat', (channel, tags, user, message ,self) =>{
     
     if(message == erg){
         ergAnt = message;
-        client.action('saqzzy', ´${user} hatte am schnellsten die richtige Antwort!´)
+        client.action('saqzzy', `${user} hatte am schnellsten die richtige Antwort!`)
         erg = 123123123;
     }
 })
