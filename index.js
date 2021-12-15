@@ -45,6 +45,10 @@ client.on('chat', (channel, user, message ,self) =>{
         client.action('saqzzy', 'Miri ist cute. <3')
     }
     
+    if(message == '!cute') {
+        client.action('saqzzy', 'Miri <3 Philip')
+    }
+    
     if(message == '!bra') {
         var x = Math.floor(Math.random() * (100 - 1) + 1);
         client.action('saqzzy', 'Du bist zu ' + x + '% Bratan B)')
