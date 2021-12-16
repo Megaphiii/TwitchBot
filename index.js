@@ -74,22 +74,24 @@ client.on('chat', (channel, user, message ,self) =>{
             client.action('saqzzy', 'Rechenaufgabe: ' + r1 + ' * ' + r2 + ' = ?')
             erg = r1*r2;
         }
-        /*
+        
         for(var i=0;i<20;i++){
-            if(i == 0){
-                client.action('saqzzy', 'ICH GEHE REIN')
-            }
             setTimeout(add, 1000)
-            function add(){}
-            if(i == 10){
-                client.action('saqzzy', erg + ' wäre richtig gewesen!')
+            function add(){
+                if(i == 0){
+                    console.log('Start');
+                }
+                if(i == 10){
+                    console.log('10 SEK');
+                }
             }
-        }*/
+            
+        }
     }
     
     if(message == erg){
         ergAnt = message;
-        client.action('saqzzy', `${user} hatte am schnellsten die richtige Antwort!`)
+        client.action('saqzzy', '${user} hatte am schnellsten die richtige Antwort!')
         erg = 123123123;
     }
 })
