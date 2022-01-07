@@ -91,7 +91,7 @@ client.on('chat', (channel, user, message ,self) =>{
     
     if(message == erg){
         ergAnt = message;
-        client.action('saqzzy', user + ' hatte am schnellsten die richtige Antwort!')
+        client.action('saqzzy', erg + ' ist die richtige Antwort!')
         erg = 123123123;
     }
 })
